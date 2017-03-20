@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication - Video.Plugins", "Communication - Video.Plugins.csproj", "{DFB1FAE7-2867-7EA1-5689-EFC00FD5104F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication - Video", "Communication - Video.csproj", "{F13B771B-8B82-07BF-FBCB-B3A5BA4FD14E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication - Video.Editor.Plugins", "Communication - Video.Editor.Plugins.csproj", "{ACFC21B4-5376-464F-C70B-8ECA0B777EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication - Video.Editor", "Communication - Video.Editor.csproj", "{D25E03E0-1EE7-B946-B509-6C15EF1A87C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFB1FAE7-2867-7EA1-5689-EFC00FD5104F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB1FAE7-2867-7EA1-5689-EFC00FD5104F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB1FAE7-2867-7EA1-5689-EFC00FD5104F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB1FAE7-2867-7EA1-5689-EFC00FD5104F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13B771B-8B82-07BF-FBCB-B3A5BA4FD14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13B771B-8B82-07BF-FBCB-B3A5BA4FD14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13B771B-8B82-07BF-FBCB-B3A5BA4FD14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13B771B-8B82-07BF-FBCB-B3A5BA4FD14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFC21B4-5376-464F-C70B-8ECA0B777EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFC21B4-5376-464F-C70B-8ECA0B777EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFC21B4-5376-464F-C70B-8ECA0B777EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFC21B4-5376-464F-C70B-8ECA0B777EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25E03E0-1EE7-B946-B509-6C15EF1A87C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25E03E0-1EE7-B946-B509-6C15EF1A87C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25E03E0-1EE7-B946-B509-6C15EF1A87C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25E03E0-1EE7-B946-B509-6C15EF1A87C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
