@@ -16,6 +16,9 @@ public class Game : MonoBehaviour {
     public GameObject goodEffect;
     public GameObject badEffect;
 
+    public defile goodMessage;
+    public IMessageViewer badMessage;
+
     public float dropSpeed;
     public float messageTime;
 
@@ -72,22 +75,20 @@ public class Game : MonoBehaviour {
         Vector3 selectedSide = new Vector3();
         // Lazy side
         float movementRemaining = 2f;
-        float rnd = Random.value;
-
-        Debug.Log("Random: " + rnd);
+        float rnd = currentVerb.GetComponent<Verb>().side;
         int selectedGroup;
-        if (rnd < 0.33f) {
-            //Right
-            selectedSide.x += 2;
-            selectedGroup = 2;
-        } else if(rnd < 0.67f) {
+        if (rnd == 1) {
             //Left
             selectedGroup = 1;
             selectedSide.x -= 2;
+        } else if(rnd == 2) {
+            //Right
+            selectedSide.x += 2;
+            selectedGroup = 2;
         } else {
             //Bottom
             selectedGroup = 3;
-            selectedSide.y -= 0.5f;
+            selectedSide.y -= 0.1f;
         }
 
         while(movementRemaining > 0) {
@@ -101,14 +102,10 @@ public class Game : MonoBehaviour {
 
     IEnumerator showMessage(int group)
     {
-        //TODO: Spawn message
-        if (currentVerb.GetComponent<Verb>().verbGroupNumber == group) {
-            // Good
-            Destroy(Instantiate(goodEffect, currentVerb.transform.position, goodEffect.transform.rotation), 4f);
-        } else {
-            // Bad
-            Destroy(Instantiate(badEffect, currentVerb.transform.position, badEffect.transform.rotation), 3f);
-        }
+        string message = currentVerb.GetComponent<Verb>().message;
+        Destroy(Instantiate(goodEffect, currentVerb.transform.position, goodEffect.transform.rotation), 4f);
+        Destroy(currentVerb, 4f);
+        goodMessage.showMessage(message);
         yield return new WaitForSeconds(messageTime);
         state = dropState.WAITING;
     }
@@ -135,7 +132,7 @@ public class Game : MonoBehaviour {
         groupPosition.y = 1 - (scale.y / 2);
         verbGroups[2].buildVerbUI().transform.position = groupPosition;
         groupPosition.x = -scale.x;
-        groupPosition.y = 2 - (scale.y/2);
+        groupPosition.y = 3 - (scale.y/2);
         verbGroups[0].buildVerbUI().transform.position = groupPosition;
         groupPosition.x *= -1;
         verbGroups[1].buildVerbUI().transform.position = groupPosition;

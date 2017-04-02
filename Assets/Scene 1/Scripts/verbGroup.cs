@@ -35,7 +35,7 @@ public class verbGroup : MonoBehaviour {
         return goodMessages[goodMessageIndex++];
     }
 
-    public string getbadMessage()
+    public string getBadMessage()
     {
         return badMessages[badMessageIndex++];
     }
